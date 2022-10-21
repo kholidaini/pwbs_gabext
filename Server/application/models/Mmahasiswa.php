@@ -47,6 +47,7 @@ class Mmahasiswa extends CI_Model
         $query=$this->db->get()->result();
 
         // jika data "NPM" ditemukan
+        // test edit 
         if(count($query)==0)
         // ($query)!=0) = memungkinkan penarikan data lebih dari 1
         {
