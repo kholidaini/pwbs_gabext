@@ -1,0 +1,40 @@
+:root{
+    /*  */
+    --putih:#ffffff;
+    --merah:#ff0000;
+    --abu:#333333;
+    --garis: 1px solid var(--abu);
+    --jarak:5px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+th,td{
+    border: var(--garis);
+
+}
+
+th{
+    background: var(--merah);
+    color: var(--putih);
+    padding: var(--jarak);
+}
+
+td{
+    background: var(--putih);
+    color: var(--abu);
+    padding: var(--jarak);
+}
+
+.area-tombol{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 300px;
+    background: var(--merah);
+
+}
