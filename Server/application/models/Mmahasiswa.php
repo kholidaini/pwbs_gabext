@@ -29,10 +29,6 @@ class Mmahasiswa extends CI_Model
         {
             // hapus data
             $this->db->where("TO_BASE64(npm)= '$token'");
-<<<<<<< HEAD
-
-=======
->>>>>>> 5e290883be019d5bdf58143083f20143573e2a5c
             $this->db->delete("tb_mahasiswa");
             $hasil=1;
         }
@@ -61,10 +57,7 @@ class Mmahasiswa extends CI_Model
                 "telepon"=>$telepon,
                 "jurusan"=>$jurusan,
             );
-<<<<<<< HEAD
             // proses simpan data
-=======
->>>>>>> 5e290883be019d5bdf58143083f20143573e2a5c
             $this->db->insert("tb_mahasiswa",$data);
             $hasil=0;
         }
@@ -73,7 +66,6 @@ class Mmahasiswa extends CI_Model
         }
         return $hasil;
     }
-<<<<<<< HEAD
 
 
     // fungsi ubah data
@@ -112,6 +104,4 @@ class Mmahasiswa extends CI_Model
 
 
 
-=======
->>>>>>> 5e290883be019d5bdf58143083f20143573e2a5c
 }
