@@ -8,14 +8,15 @@
 
 
     <!-- import css -->
-<link rel="stylesheet" href="<?php echo "ext/style.css"?>">
+    <link rel="stylesheet" href="<?php echo "ext/style.css"?>">
+    
 
 </head>
 <body>
     <!-- bbuat menu -->
     <nav class="area-tombol">
-        <button class="" id="btn_tambah">tambah data</button>
-        <button class="" id="btn_refresh"> refresh data </button>
+        <button class="btn-primary" id="btn_tambah">tambah data</button>
+        <button class="btn-secondary" id="btn_refresh" onclick="setRefresh()"> refresh data </button>
     </nav>
     <!-- buat tabel mahasiswa -->
     <table style="width: 100%;">
@@ -34,7 +35,7 @@
         <!-- mulai looping -->
         <tbody>
         <tr>
-            
+            <td><?php echo""?></td>
             <td style="text-align: center;">A</td>
             <td style="text-align: center;">A</td>
             <td style="text-align: center;">A</td>
@@ -45,5 +46,37 @@
         </tr>
         </tbody>
     </table>
+    <script>
+
+        let btn_tambah = document.getElementById("btn_tambah");
+
+        btn_tambah.addEventListener('click',function(){
+            // btn_tambah.style.background ="#FFFFFF";
+            // btn_tambah.style.color="#000000";
+            // this.style.borderRadius="10px";
+            // this.style.fontSize ="200px";
+            // this.className = "btn-secondary";
+
+            // manipulasi html
+            // this.innerHTML = "<strong>Tambah</strong>";
+
+            // alihkan ke halaman controller 
+            location.href="<?php echo "Mahasiswa/addMahasiswa" ?>"
+
+
+            alert("Tambah Data")
+        })
+
+        // membuat function tombol tambah
+        // function info(){
+        //     alert("Tambah Data")
+        // }
+
+        function setRefresh(){
+            location.href="<?php echo "http://localhost:8080/pwbs_gabext/client/"?>"
+        }
+
+        
+    </script>
 </body>
 </html>
