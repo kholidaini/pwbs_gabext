@@ -8,7 +8,7 @@
 
 
     <!-- import css -->
-    <link rel="stylesheet" href="<?php echo "ext/style.css"?>">
+    <link rel="stylesheet" href="<?php echo base_url("ext/style.css")?>">
     
 
 </head>
@@ -38,7 +38,7 @@
             <td><?php echo""?></td>
             <td style="text-align: center;">A</td>
             <td style="text-align: center;">A</td>
-            <td style="text-align: center;">A</td>
+            <td style="text-align: left;">A</td>
             <td style="text-align: justify;">A</td>
             <td style="text-align: center;">A</td>
             
