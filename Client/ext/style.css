@@ -4,7 +4,7 @@
     --merah: #ff0000;
     --abu: #333333;
     --biru: #0059ce;
-    --garis: 1px solid var(--abu);
+    --garis: 1px solid var(--merah);
     --jarak: 5px;
 }
 
@@ -41,23 +41,32 @@ td {
 
 .btn-primary {
     background: var(--biru);
+    font-size: 10px;
+    font-weight: bold;
+    text-transform:uppercase;
     color: var(--putih);
     height: 40px;
-    width: 100px;
-    border-radius: 25px;
+    width: 120px;
+    border-radius: 30px;
     padding: var(--jarak);
-    margin-right: 10px;
+    margin-right: var(--jarak);
+    cursor: pointer;
     /* border: var(--garis); */
     /* outline: 0; */
 }
 
 .btn-secondary {
     background: var(--putih);
+    font-size: 10px;
+    font-weight: bold;
+    text-transform:uppercase;
+    color: var(--biru);
     height: 40px;
-    width: 100px;
+    width: 120px;
     border-radius: 25px;
     padding: var(--jarak);
-    margin-right: 10px;
+    margin-left: var(--jarak);
+    cursor: pointer;
     /* border: var(--garis); */
     /* outline: 0; */
 }

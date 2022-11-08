@@ -41,7 +41,7 @@
             <td style="text-align: center;">A</td>
             <td style="text-align: justify;">A</td>
             <td style="text-align: center;">A</td>
-            <td style="text-align: center;">A</td>
+            
         <!-- akhir looping -->
         </tr>
         </tbody>
