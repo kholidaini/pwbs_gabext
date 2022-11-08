@@ -1,0 +1,5 @@
+1 kelompok 3orang (minimal 2orang)
+judul bebas
+membuat API (membuat web services)
+kolaborasi via github
+limit 2minggu
