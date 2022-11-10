@@ -20,7 +20,7 @@ class Mmahasiswa extends CI_Model
         $this->db->select("npm");
         $this->db->from("tb_mahasiswa");
         // $this->db->where("TO_BASE64(npm)='$token'");
-        $this->db->where("TO_BASE64(npm)='$token'");
+        $this->db->where("npm='$token'");
         $query=$this->db->get()->result();
 
         // jika data "NPM" ditemukan
@@ -28,7 +28,7 @@ class Mmahasiswa extends CI_Model
         // ($query)!=0) = memungkinkan penarikan data lebih dari 1
         {
             // hapus data
-            $this->db->where("TO_BASE64(npm)= '$token'");
+            $this->db->where("npm= '$token'");
             $this->db->delete("tb_mahasiswa");
             $hasil=1;
         }
@@ -74,7 +74,8 @@ class Mmahasiswa extends CI_Model
         // cek npm
         $this->db->select("npm");
         $this->db->from("tb_mahasiswa");
-        $this->db->where("TO_BASE64(npm) !='$token'AND npm ='$npm'");
+        // $this->db->where("TO_BASE64(npm) !='$token'AND npm ='$npm'");
+        $this->db->where("npm !='$token'AND npm ='$npm'");
         $query=$this->db->get()->result();
 
         // jika data "NPM" ditemukan
@@ -89,7 +90,7 @@ class Mmahasiswa extends CI_Model
                 "jurusan"=>$jurusan,
             );
             // proses ubah data
-            $this->db->where("TO_BASE64(npm)='$token'");
+            $this->db->where("npm='$token'");
 
             $this->db->update("tb_mahasiswa",$data);
             $hasil=0;
