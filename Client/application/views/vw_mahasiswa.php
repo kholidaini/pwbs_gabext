@@ -16,7 +16,8 @@
     <!-- bbuat menu -->
     <nav class="area-tombol">
         <button class="btn-primary" id="btn_tambah">tambah data</button>
-        <button class="btn-secondary" id="btn_refresh" onclick="setRefresh()"> refresh data </button>
+        <button class="btn-secondary" id="btn_refresh" 
+        onclick="return setRefresh()"> refresh data </button>
     </nav>
     <!-- buat tabel mahasiswa -->
     <table style="width: 100%;">
@@ -34,47 +35,68 @@
         <!-- buat isi tabel-->
         <!-- mulai looping -->
         <tbody>
+        <?php
+        // inisialisasi variabel $no
+        $no=1;
+        // menampilkan hasil service "get" dengan looping
+        foreach($tampil->mahasiswa as $record)
+        {
+
+        ?>
         <tr>
-            <td><?php echo""?></td>
-            <td style="text-align: center;">A</td>
-            <td style="text-align: center;">A</td>
-            <td style="text-align: left;">A</td>
-            <td style="text-align: justify;">A</td>
-            <td style="text-align: center;">A</td>
+        <td style="text-align: center;">-</td>
+            <td style="text-align: center;"><?php echo $no;?></td>
+            <td style="text-align: center;"><?php echo $record->npm_mhs;?></td>
+            <td style="text-align: left;"><?php echo $record->nama_mhs;?></td>
+            <td style="text-align: justify;"><?php echo $record->telepon_mhs;?></td>
+            <td style="text-align: center;"><?php echo $record->jurusan_mhs;?></td>
             
         <!-- akhir looping -->
         </tr>
         </tbody>
+        <?php
+
+            $no++;
+
+            }   
+        ?>
     </table>
     <script>
 
+        // fungsi JS
+
+        // button refresh
+        function setRefresh(){
+            // alihkan ke controller mahasiswa
+            location.href='<?php echo base_url();?>'
+        }
+
+
+        // event button tambah berdasarkan id
         let btn_tambah = document.getElementById("btn_tambah");
 
-        btn_tambah.addEventListener('click',function(){
-            // btn_tambah.style.background ="#FFFFFF";
-            // btn_tambah.style.color="#000000";
-            // this.style.borderRadius="10px";
-            // this.style.fontSize ="200px";
-            // this.className = "btn-secondary";
+        // buat fungsi tambah
+        // btn_tambah.addEventListener('click',setRefresh)
+        btn_tambah.addEventListener('click',
+        function(){
+
+            // alihkan ke halaman (controller) tambah mahasiswa
+            
 
             // manipulasi html
-            // this.innerHTML = "<strong>Tambah</strong>";
+            // this.value="Entry Data"
+            // this.innerHTML="<em>Entry Data</em>"
+            // this.text="Entry Data"
 
-            // alihkan ke halaman controller 
-            location.href="<?php echo "Mahasiswa/addMahasiswa" ?>"
+            // manipulasi css
+            // this.style.color="#FF0000"
+            // this.style.fontSize="40px"
 
+            // manipulasi dengan mengambil class
+            this.className= 'btn-secondary'
 
-            alert("Tambah Data")
         })
-
-        // membuat function tombol tambah
-        // function info(){
-        //     alert("Tambah Data")
-        // }
-
-        function setRefresh(){
-            location.href="<?php echo "http://localhost:8080/pwbs_gabext/client/"?>"
-        }
+        
 
         
     </script>

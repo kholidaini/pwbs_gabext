@@ -9,12 +9,14 @@ class Mahasiswa extends CI_Controller {
 		// ambil data api mahasiswa(get)
 		$data["tampil"]=json_decode($this->client->simple_get(APIMAHASISWA));
 
-		foreach($data["tampil"]->mahasiswa as $record){
+		// foreach($data["tampil"]->mahasiswa as $record){
 
-			echo $record->npm_mhs."-".
-				$record->nama_mhs."<br>";
-		}
+		// 	echo $record->npm_mhs."-".
+		// 		$record->nama_mhs."<br>";
+		// }
 
-		$this->load->view('vw_mahasiswa');
+
+
+		$this->load->view('vw_mahasiswa',$data);
 	}
 }
