@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tampil Data Mahasiswa</title>
 
+    <!-- import cdnjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
     <!-- import css -->
     <link rel="stylesheet" href="<?php echo base_url("ext/style.css")?>">
+    
     
 
 </head>
@@ -44,7 +48,7 @@
 
         ?>
         <tr>
-        <td style="text-align: center;">-</td>
+        <td style="text-align: center;"><i class="fa-solid fa-trash"></i></td>
             <td style="text-align: center;"><?php echo $no;?></td>
             <td style="text-align: center;"><?php echo $record->npm_mhs;?></td>
             <td style="text-align: left;"><?php echo $record->nama_mhs;?></td>
@@ -61,6 +65,9 @@
             }   
         ?>
     </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js" integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script>
 
         // fungsi JS
@@ -82,6 +89,7 @@
 
             // alihkan ke halaman (controller) tambah mahasiswa
             
+            // location.href='<?php echo site_url("Mahasiswa/addMahasiswa");?>
 
             // manipulasi html
             // this.value="Entry Data"
@@ -93,7 +101,7 @@
             // this.style.fontSize="40px"
 
             // manipulasi dengan mengambil class
-            this.className= 'btn-secondary'
+            this.className= 'btn-+secondary'
 
         })
         
