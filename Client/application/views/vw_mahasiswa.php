@@ -130,10 +130,14 @@
         // buat fungsi hapus data
         function gotoDelete(npm,nama){
             // tambahkan confirm delete
-            if(confirm("Data Mahasiswa "+npm+" ingin dihapus ?")===true)
+            let keterangan = npm+"-"+nama;
+            if(confirm("Data Mahasiswa "+keterangan+" ingin dihapus ?")===true)
             {
                 alert("Data Berhasil Dihapus");
             }
+            // else{
+
+            // }
         }
         
     </script>
