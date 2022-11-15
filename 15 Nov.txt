@@ -1,0 +1,9 @@
+cdn (content deilevy network) rekomendasi item/tag dalam website agar website menjadi ringan
+
+persentase hitung untuk style.css object/area 
+ex : 	margin :2%
+	width : 98%
+tidak melebihi area ukuran max 100%
+
+umumnya class css dalam website menggunakan strip - (ex : btn-hapus
+umumnya id JS dalam web menggunakan underscore _ (ex : btn_hapus

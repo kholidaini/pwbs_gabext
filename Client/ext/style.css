@@ -70,3 +70,29 @@ td {
     /* border: var(--garis); */
     /* outline: 0; */
 }
+
+.area-aksi{
+    display: flex;
+    width: 100%;
+
+}
+
+.btn-ubah,.btn-hapus{
+    width: 49%;
+    /* border: var(--garis); */
+    padding: calc(var(--jarak)*2);
+    color: var(--putih);
+    border-radius: calc(var(--jarak)*2);
+    cursor: pointer;
+}
+
+.btn-ubah{
+
+    background-color: var(--biru);
+    margin-right: 1%;
+}
+
+.btn-hapus{
+    background-color: var(--merah);
+    margin-left: 1%;
+}
