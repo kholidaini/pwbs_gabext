@@ -7,3 +7,8 @@ tidak melebihi area ukuran max 100%
 
 umumnya class css dalam website menggunakan strip - (ex : btn-hapus
 umumnya id JS dalam web menggunakan underscore _ (ex : btn_hapus
+
+memperjelas parameter dalam pengambilan data 
+ex : $npm $id $telepon
+
+peranan krusial dalam DELETE , memberikan pesan JS saat konfirmasi Delete

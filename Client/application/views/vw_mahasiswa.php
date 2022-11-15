@@ -54,16 +54,13 @@
                 <!-- tombol ubah -->
                 <button class="btn-ubah" id="btn_ubah" title="Ubah Data Mahasiswa" 
                 onclick="return gotoUpdate('<?php echo $record->npm_mhs;?>')">
-                    <i class="fa-solid fa-pen">
-                        
-                    </i>
+                    <i class="fa-solid fa-pen"></i>
                 </button>
                 <!-- tombol hapus -->
                 <button class="btn-hapus" id="btn_hapus" title="Hapus Data Mahasiswa"
-                onclick="return gotoDelete('<?php echo $record->npm_mhs;?>')">
-                    <i class="fa-solid fa-trash">
-
-                    </i>
+                onclick="return gotoDelete
+                    ('<?php echo $record->npm_mhs;?>','<?php echo $record->nama_mhs;?>')">
+                    <i class="fa-solid fa-trash"></i>
                 </button>
             </nav>
 
@@ -130,6 +127,14 @@
             location.href='<?php echo site_url("Mahasiswa/updateMahasiswa");?>'+'/'+npm;
         }
 
+        // buat fungsi hapus data
+        function gotoDelete(npm,nama){
+            // tambahkan confirm delete
+            if(confirm("Data Mahasiswa "+npm+" ingin dihapus ?")===true)
+            {
+                alert("Data Berhasil Dihapus");
+            }
+        }
         
     </script>
 </body>
