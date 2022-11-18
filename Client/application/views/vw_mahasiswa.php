@@ -133,12 +133,44 @@
             let keterangan = npm+"-"+nama;
             if(confirm("Data Mahasiswa "+keterangan+" ingin dihapus ?")===true)
             {
-                alert("Data Berhasil Dihapus");
+                // alert("Data Berhasil Dihapus");
+
+                setDelete(npm)
+
             }
             // else{
 
             // }
         }
+
+        function setDelete(npm)
+            {
+            const data = {
+                "npmnya" : npm
+            }
+
+            fetch('<?php echo site_url("Mahasiswa/setDelete");?>',
+            {
+                method : "POST",
+                headers : {
+                "Content-Type" : "application/json"
+            },
+                body : JSON.stringify(data)
+            })
+
+            .then((response)=>{
+                // jika nilai 0
+                
+                    return response.json()
+            })
+            .then(function(data){
+                // jika nilai err = 0
+                if(data.err === 0)
+                alert("Data berhasil dihapus")
+                else
+                alert("data gagal dihapus")
+            })
+            }
         
     </script>
 </body>

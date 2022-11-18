@@ -18,5 +18,20 @@ class Mahasiswa extends CI_Controller {
 
 
 		$this->load->view('vw_mahasiswa',$data);
+
+
+		
+	}
+
+	function setDelete(){
+		$json = file_get_contents("php://input");
+		$hasil = json_decode($json);
+
+		// $delete = json_decode($this->client->simple_delete(APIMAHASISWA, array("npm"=>$hasil->npmnya)));
+
+
+		$err = 1;
+
+		echo json_encode(array("err"=>$err));
 	}
 }
