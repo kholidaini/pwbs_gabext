@@ -164,11 +164,18 @@
                     return response.json()
             })
             .then(function(data){
-                // jika nilai err = 0
-                if(data.err === 0)
-                alert("Data berhasil dihapus")
-                else
-                alert("data gagal dihapus")
+                // // jika nilai err = 0
+                // if(data.err === 0)
+                // alert("Data berhasil dihapus")
+                // else
+                // alert("data gagal dihapus")
+
+
+                alert(data.statusnya);
+
+                // fungsi setrefresh (autorefresh)
+                setRefresh();
+
             })
             }
         
