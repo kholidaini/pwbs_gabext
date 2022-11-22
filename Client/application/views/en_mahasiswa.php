@@ -23,26 +23,26 @@
 
 
     <!-- buat area entry data -->
-    <main class="">
+    <main class="area-grid">
 
-    <section class="">1</section>
-    <section class="">1</section>
-    <section class="">1</section>
-
-
-    <section class="">1</section>
-    <section class="">1</section>
-    <section class="">1</section>
+    <section class="item-label1">1</section>
+    <section class="item-input1">1</section>
+    <section class="item-error1">1</section>
 
 
-    <section class="">1</section>
-    <section class="">1</section>
-    <section class="">1</section>
+    <section class="item-label2">1</section>
+    <section class="item-input2">1</section>
+    <section class="item-error2">1</section>
 
 
-    <section class="">1</section>
-    <section class="">1</section>
-    <section class="">1</section>
+    <section class="item-label3">1</section>
+    <section class="item-input3">1</section>
+    <section class="item-error3">1</section>
+
+
+    <section class="item-label4">1</section>
+    <section class="item-input4">1</section>
+    <section class="item-error4">1</section>
 
 
 
