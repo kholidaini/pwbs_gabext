@@ -17,7 +17,7 @@
 
 </head>
 <body>
-    <!-- bbuat menu -->
+    <!-- button menu -->
     <nav class="area-tombol">
         <button class="btn-primary" id="btn_tambah">tambah data</button>
         <button class="btn-secondary" id="btn_refresh" 
