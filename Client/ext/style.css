@@ -97,19 +97,36 @@ td {
     margin-left: 1%;
 }
 
+
+.item-label1,.item-input1,.item-error1,
+.item-label2,.item-input2,.item-error2,
+.item-label3,.item-input3,.item-error3,
+.item-label4,.item-input4,.item-error4,
+.area-grid{
+    display: grid;
+    align-items: center;
+    padding:var(--jarak);
+}
+
 /* 1 */
 .item-label1{
     grid-area: label1;
+    background-color: #00ceac;
+
 
 }
 
 .item-input1{
     grid-area: input1;
+    background-color: rgb(130, 174, 255);
+
     
 }
 
 .item-error1{
     grid-area: error1;
+    background-color: #00ceac;
+    
 }
 
 
@@ -143,6 +160,21 @@ td {
     grid-area: error3;
 }
 
+/* 4 */
+.item-label4{
+    grid-area: label4;
+
+}
+
+.item-input4{
+    grid-area: input4;
+    
+}
+
+.item-error4{
+    grid-area: error4;
+}
+
 .area-grid{
     width: 100%;
     grid-template-areas:
@@ -151,7 +183,5 @@ td {
     'label3 input3 input3 error3'
     'label4 input4 input4 error4';
     grid-gap:10px;
-
-
 
 }
