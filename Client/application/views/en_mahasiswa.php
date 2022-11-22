@@ -23,5 +23,28 @@
 
 
 
+
+    <script>
+        // inisialisasi object
+        let btn_lihat = document.getElementById("btn_lihat");
+
+        // buat event btn_lihat
+        btn_lihat.addEventListener('click',function(){
+            location.href='<?php echo base_url();?>'
+
+
+        })
+
+
+        // buat fungsi refresh
+        function setRefresh(){
+            // alihkan ke controller mahasiswa
+            location.href='<?php echo site_url("\Mahasiswa/addMahasiswa");?>'
+        }
+
+
+    </script>
+
+
 </body>
 </html>
