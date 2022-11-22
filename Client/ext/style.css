@@ -96,3 +96,16 @@ td {
     background-color: var(--merah);
     margin-left: 1%;
 }
+
+.area-grid{
+    width: 100%;
+    grid-template-areas:
+    'label1 input1 input1 error1'
+    'label2 input2 input2 error2'
+    'label3 input3 input3 error3'
+    'label4 input4 input4 error4';
+    grid-gap:10px;
+    
+
+
+}

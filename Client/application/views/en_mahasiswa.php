@@ -22,6 +22,31 @@
     </nav>
 
 
+    <!-- buat area entry data -->
+    <main class="">
+
+    <section class="">1</section>
+    <section class="">1</section>
+    <section class="">1</section>
+
+
+    <section class="">1</section>
+    <section class="">1</section>
+    <section class="">1</section>
+
+
+    <section class="">1</section>
+    <section class="">1</section>
+    <section class="">1</section>
+
+
+    <section class="">1</section>
+    <section class="">1</section>
+    <section class="">1</section>
+
+
+
+    </main>
 
 
     <script>
@@ -30,6 +55,7 @@
 
         // buat event btn_lihat
         btn_lihat.addEventListener('click',function(){
+            // alihkan ke controller mahasiswa
             location.href='<?php echo base_url();?>'
 
 
@@ -38,8 +64,8 @@
 
         // buat fungsi refresh
         function setRefresh(){
-            // alihkan ke controller mahasiswa
-            location.href='<?php echo site_url("\Mahasiswa/addMahasiswa");?>'
+            // alihkan ke controller Addmahasiswa
+            location.href='<?php echo site_url("Mahasiswa/addMahasiswa");?>'
         }
 
 
