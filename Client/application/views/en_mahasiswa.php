@@ -28,28 +28,42 @@
     <section class="item-label1">
         <label for="txt_npm" id="id_npm">NPM :</label>
     </section>
-    <section class="item-input1">1</section>
+    <section class="item-input1">
+        <input type="text" id="txt_npm" class="" maxlength="9">
+    </section>
     <section class="item-error1">1</section>
 
 
     <section class="item-label2">
-        <label for="txt_nama" id="id_nama">Nama :</label>
+        <input type="text" id="txt_nama" class="" maxlength="50">
+    <section class="item-input2">
+        
     </section>
-    <section class="item-input2">2</section>
     <section class="item-error2">2</section>
 
 
     <section class="item-label3">
         <label for="txt_telepon" id="id_telepon">Telepon :</label>
     </section>
-    <section class="item-input3">3</section>
+    <section class="item-input3">
+    <input type="text" id="txt_telepon" class="" maxlength="13">
+    </section>
     <section class="item-error3">3</section>
 
 
     <section class="item-label4">
         <label for="txt_jurusan" id="cbo_jurusan">Jurusan :</label>
     </section>
-    <section class="item-input4">4</section>
+    <section class="item-input4">
+        <select id="cbo_jurusan" class="">
+            <option value="-">Pilih Jurusan</option>
+            <option value="IF">Informatika</option>
+            <option value="SI">Sistem Informasi</option>
+            <option value="TI">Teknologi Informasi</option>
+            <option value="TK">Teknologi Komputer</option>
+            <option value="SIA">Sistem Informasi Akuntansi</option>
+        </select>
+    </section>
     <section class="item-error4">4</section>
 
 
