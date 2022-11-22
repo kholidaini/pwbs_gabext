@@ -12,3 +12,5 @@ memperjelas parameter dalam pengambilan data
 ex : $npm $id $telepon
 
 peranan krusial dalam DELETE , memberikan pesan JS saat konfirmasi Delete
+
+22 Nov 2022
