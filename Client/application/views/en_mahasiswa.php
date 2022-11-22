@@ -25,22 +25,30 @@
     <!-- buat area entry data -->
     <main class="area-grid">
 
-    <section class="item-label1">1</section>
+    <section class="item-label1">
+        <label for="txt_npm" id="id_npm">NPM :</label>
+    </section>
     <section class="item-input1">1</section>
     <section class="item-error1">1</section>
 
 
-    <section class="item-label2">2</section>
+    <section class="item-label2">
+        <label for="txt_nama" id="id_nama">Nama :</label>
+    </section>
     <section class="item-input2">2</section>
     <section class="item-error2">2</section>
 
 
-    <section class="item-label3">3</section>
+    <section class="item-label3">
+        <label for="txt_telepon" id="id_telepon">Telepon :</label>
+    </section>
     <section class="item-input3">3</section>
     <section class="item-error3">3</section>
 
 
-    <section class="item-label4">4</section>
+    <section class="item-label4">
+        <label for="txt_jurusan" id="cbo_jurusan">Jurusan :</label>
+    </section>
     <section class="item-input4">4</section>
     <section class="item-error4">4</section>
 
