@@ -57,7 +57,7 @@
         <label for="txt_jurusan" id="cbo_jurusan">JURUSAN :</label>
     </section>
     <section class="item-input4">
-        <select id="cbo_jurusan" class="">
+        <select id="cbo_jurusan" class="select-input">
             <option value="-">Pilih Jurusan</option>
             <option value="IF">Informatika</option>
             <option value="SI">Sistem Informasi</option>

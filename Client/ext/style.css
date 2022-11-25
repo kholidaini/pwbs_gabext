@@ -3,9 +3,10 @@
     --putih: #ffffff;
     --merah: #ff0000;
     --abu: #333333;
+    --shadow:#33333354;
     --biru: #0059ce;
     --garis: 1px solid var(--merah);
-    --jarak: 5px;
+    --jarak: 10px;
 }
 
 table {
@@ -185,11 +186,24 @@ td {
 
 }
 
-.text-input{
+.text-input, .select-input{
+    
     border:var(--garis);
     border-radius: calc(var(--jarak)*3);
     outline: 0;
     padding: 0 var(--jarak);
     height: calc(var(--jarak)*3);
     font-size: 14px;
+}
+
+.select-input{
+    background: none;
+}
+
+
+/* pseudo css */
+
+.text-input:focus,.select-input:focus{
+    border: 1px solid var(--biru);
+    box-shadow: 0 3px 6px var(--shadow);
 }
