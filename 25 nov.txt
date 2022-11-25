@@ -1,0 +1,4 @@
+sync - async
+async 	- > promise
+	- > async/await
+sync tidak tepat untuk proses yg banyak

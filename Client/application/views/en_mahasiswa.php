@@ -30,7 +30,7 @@
         <label for="txt_npm" id="id_npm">NPM :</label>
     </section>
     <section class="item-input1">
-        <input type="text" id="txt_npm" class="" maxlength="9">
+        <input type="text" id="txt_npm" class="text-input" maxlength="9">
     </section>
     <section class="item-error1">1</section>
 
@@ -39,18 +39,18 @@
         <label for="txt_nama" id="id_nama">NAMA :</label>
     </section>
     <section class="item-input2">
-        <input type="text" id="txt_nama" class="" maxlength="50">
+        <input type="text" id="txt_nama" class="text-input" maxlength="50">
     </section>
-    <section class="item-error2">1</section>
+    <section class="item-error2">Error</section>
 
     <!-- Telepon -->
     <section class="item-label3">
         <label for="txt_telepon" id="id_telepon">TELEPON :</label>
     </section>
     <section class="item-input3">
-        <input type="text" id="txt_telepon" class="" maxlength="13">
+        <input type="text" id="txt_telepon" class="text-input" maxlength="15">
     </section>
-    <section class="item-error3">1</section>
+    <section class="item-error3">Error</section>
 
     <!-- Jurusan -->
     <section class="item-label4">
@@ -66,11 +66,14 @@
             <option value="SIA">Sistem Informasi Akuntansi</option>
         </select>
     </section>
-    <section class="item-error4">1</section>
+    <section class="item-error4">Error</section>
 
 
     </main>
 
+    <nav class="area-tombol">
+        <button class="btn-primary" id="btn_simpan">Simpan Data</button>
+    </nav>
 
     <script>
         // inisialisasi object
