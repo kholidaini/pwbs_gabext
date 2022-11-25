@@ -25,6 +25,7 @@
     <!-- buat area entry data -->
     <main class="area-grid">
 
+    <!-- npm -->
     <section class="item-label1">
         <label for="txt_npm" id="id_npm">NPM :</label>
     </section>
@@ -33,26 +34,27 @@
     </section>
     <section class="item-error1">1</section>
 
-
+    <!-- nama -->
     <section class="item-label2">
-        <input type="text" id="txt_nama" class="" maxlength="50">
-    <section class="item-input2">
-        
+        <label for="txt_nama" id="id_nama">NAMA :</label>
     </section>
-    <section class="item-error2">2</section>
+    <section class="item-input2">
+        <input type="text" id="txt_nama" class="" maxlength="50">
+    </section>
+    <section class="item-error2">1</section>
 
-
+    <!-- Telepon -->
     <section class="item-label3">
-        <label for="txt_telepon" id="id_telepon">Telepon :</label>
+        <label for="txt_telepon" id="id_telepon">TELEPON :</label>
     </section>
     <section class="item-input3">
-    <input type="text" id="txt_telepon" class="" maxlength="13">
+        <input type="text" id="txt_telepon" class="" maxlength="13">
     </section>
-    <section class="item-error3">3</section>
+    <section class="item-error3">1</section>
 
-
+    <!-- Jurusan -->
     <section class="item-label4">
-        <label for="txt_jurusan" id="cbo_jurusan">Jurusan :</label>
+        <label for="txt_jurusan" id="cbo_jurusan">JURUSAN :</label>
     </section>
     <section class="item-input4">
         <select id="cbo_jurusan" class="">
@@ -64,8 +66,7 @@
             <option value="SIA">Sistem Informasi Akuntansi</option>
         </select>
     </section>
-    <section class="item-error4">4</section>
-
+    <section class="item-error4">1</section>
 
 
     </main>

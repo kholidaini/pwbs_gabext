@@ -111,21 +111,19 @@ td {
 /* 1 */
 .item-label1{
     grid-area: label1;
-    background-color: #00ceac;
+    
 
 
 }
 
 .item-input1{
     grid-area: input1;
-    background-color: rgb(130, 174, 255);
 
     
 }
 
 .item-error1{
     grid-area: error1;
-    background-color: #00ceac;
     
 }
 
