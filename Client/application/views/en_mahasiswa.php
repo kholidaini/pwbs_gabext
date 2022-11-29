@@ -100,7 +100,25 @@
 
         btn_simpan.addEventListener('click',function(){
             // deklarasi variabel object
-            
+            let id_npm=document.getElementById("id_npm");
+            let txt_npm=document.getElementById("txt_npm");
+            let err_npm=document.getElementById("err_npm");
+
+            // jika txt_npm tidak diisi
+            if(txt_npm.value===""){
+                id_npm.style.color="#ff0000"
+                err_npm.style.display="unset"
+                err_npm.innerHTML="<em>NPM Harus Diisi !</em>"
+            }
+
+            // jika txt_npm diisi
+            else{
+                id_npm.style.color="unset"
+                err_npm.style.display="none"
+                err_npm.innerHTML=""
+            }
+
+
         })
 
 
