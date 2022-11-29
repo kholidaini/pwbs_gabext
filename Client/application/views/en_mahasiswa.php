@@ -100,9 +100,14 @@
 
         btn_simpan.addEventListener('click',function(){
             // deklarasi variabel object
+            // npm
             let id_npm=document.getElementById("id_npm");
             let txt_npm=document.getElementById("txt_npm");
             let err_npm=document.getElementById("err_npm");
+            // nama
+            let id_nama=document.getElementById("id_nama");
+            let txt_nama=document.getElementById("txt_nama");
+            let err_nama=document.getElementById("err_nama");
 
             // jika txt_npm tidak diisi
             if(txt_npm.value===""){
@@ -117,6 +122,21 @@
                 err_npm.style.display="none"
                 err_npm.innerHTML=""
             }
+
+
+            // ternary operator
+            const nama = (txt_nama.value==="")?
+            [
+                id_nama.style.color="#ff0000",
+                err_nama.style.display="unset",
+                err_nama.innerHTML="<em>Nama Harus Diisi !</em>"
+            ]
+            :
+            [
+                id_nama.style.color="unset",
+                err_nama.style.display="none",
+                err_nama.innerHTML=""
+            ]
 
 
         })
