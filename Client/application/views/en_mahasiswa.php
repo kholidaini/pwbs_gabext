@@ -32,7 +32,9 @@
     <section class="item-input1">
         <input type="text" id="txt_npm" class="text-input" maxlength="9">
     </section>
-    <section class="item-error1">1</section>
+    <section class="item-error1">
+        <p class="info-error" id="err_npm"></p>
+    </section>
 
     <!-- nama -->
     <section class="item-label2">
@@ -41,7 +43,9 @@
     <section class="item-input2">
         <input type="text" id="txt_nama" class="text-input" maxlength="50">
     </section>
-    <section class="item-error2">Error</section>
+    <section class="item-error2">
+        <p class="info-error" id="err_nama"></p>
+    </section>
 
     <!-- Telepon -->
     <section class="item-label3">
@@ -50,7 +54,9 @@
     <section class="item-input3">
         <input type="text" id="txt_telepon" class="text-input" maxlength="15">
     </section>
-    <section class="item-error3">Error</section>
+    <section class="item-error3">
+        <p class="info-error" id="err_telp"></p>
+    </section>
 
     <!-- Jurusan -->
     <section class="item-label4">
@@ -66,7 +72,9 @@
             <option value="SIA">Sistem Informasi Akuntansi</option>
         </select>
     </section>
-    <section class="item-error4">Error</section>
+    <section class="item-error4">
+        <p class="info-error" id="err_jurusan"></p>
+    </section>
 
 
     </main>
@@ -85,6 +93,14 @@
             location.href='<?php echo base_url();?>'
 
 
+        })
+
+        // inisialisasi object
+        let btn_simpan = document.getElementById("btn_simpan");
+
+        btn_simpan.addEventListener('click',function(){
+            // deklarasi variabel object
+            
         })
 
 

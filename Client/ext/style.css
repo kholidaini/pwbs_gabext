@@ -215,3 +215,9 @@ td {
 label::after{
     content: "#";
 } */
+
+.info-error{
+    color: var(--merah);
+    font-size: 12px;
+    display: none;
+}
