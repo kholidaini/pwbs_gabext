@@ -43,6 +43,16 @@ class Mahasiswa extends CI_Controller {
 	}
 
 	function setSave(){
-		
+		$data=array(
+			"npm"=>$this->input->POST("npmnya"),
+			"nama"=>$this->input->POST("namanya"),
+			"telepon"=>$this->input->POST("teleponnya"),
+			"jurusan"=>$this->input->POST("jurusannya"),
+			"token"=>$this->input->POST("npmnya"),
+			
+		);
+		$save = json_decode($this->client->simple_post(APIMAHASISWA, $data));
+		echo json_encode(array("statusnya" => $save->status));
+
 	}
 }
