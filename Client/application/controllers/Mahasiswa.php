@@ -41,4 +41,8 @@ class Mahasiswa extends CI_Controller {
 		
 		
 	}
+
+	function setSave(){
+		
+	}
 }
