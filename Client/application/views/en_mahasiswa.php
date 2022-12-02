@@ -60,10 +60,10 @@
 
     <!-- Jurusan -->
     <section class="item-label4">
-        <label for="txt_jurusan" id="cbo_jurusan">JURUSAN :</label>
+        <label for="txt_jurusan" id="id_jurusan">JURUSAN :</label>
     </section>
     <section class="item-input4">
-        <select id="cbo_jurusann" class="select-input">
+        <select id="cbo_jurusan" class="select-input">
             <option value="-">Pilih Jurusan</option>
             <option value="IF">Informatika</option>
             <option value="SI">Sistem Informasi</option>
@@ -115,8 +115,8 @@
             let err_telepon=document.getElementById("err_telepon");
 
             // jurusan
+            let id_jurusan=document.getElementById("id_jurusan");
             let cbo_jurusan=document.getElementById("cbo_jurusan");
-            let txt_jurusann=document.getElementById("cbo_jurusann");
             let err_jurusan=document.getElementById("err_jurusan");
 
             // jika txt_npm tidak diisi
@@ -164,13 +164,13 @@
 
             const jurusan = (cbo_jurusan.value==="-")?
             [
-                cbo_jurusan.style.color="#ff0000",
+                id_jurusan.style.color="#ff0000",
                 err_jurusan.style.display="unset",
                 err_jurusan.innerHTML="<em>jurusan Harus Diisi !</em>"
             ]
             :
             [
-                cbo_jurusan.style.color="unset",
+                id_jurusan.style.color="unset",
                 err_jurusan.style.display="none",
                 err_jurusan.innerHTML=""
             ]
@@ -180,28 +180,29 @@
         {
             setSave(txt_npm.value,txt_nama.value,txt_telepon.value,cbo_jurusan.value)
         
-
-        // buat fungsi refresh
-        
-            // alihkan ke controller Addmahasiswa
-            // location.href='<?php echo base_url();?>';
         }
     })
+
+    // buat fungsi refresh
+    function setRefresh(){
+            // alihkan ke controller Addmahasiswa
+            location.href='<?php echo site_url("Mahasiswa/addMahasiswa");?>'
+        }
 
     const setSave = (npm,nama,telepon,jurusan)=>{
         let form   = new FormData();
 
         // isi/tambah nilai
-        form.append("npmnya",npm);
-        form.append("namanya",namanya);
-        form.append("teleponnya",telepon);
-        form.append("jurusannya",jurusan);
+        form.append("npm_mhs",npm);
+        form.append("nama_mhs",namanya);
+        form.append("telepon_mhs",telepon);
+        form.append("jurusan_mhs",jurusan);
         
         
         // kirim data
         fetch('<?php echo site_url("Mahasiswa/setSave");?>',
         {
-            method: "POST"
+            method: "POST",
             body:form
 
         })
