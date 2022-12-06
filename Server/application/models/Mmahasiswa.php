@@ -19,8 +19,8 @@ class Mmahasiswa extends CI_Model
         // cek NPM tersedia
         $this->db->select("npm");
         $this->db->from("tb_mahasiswa");
-        // $this->db->where("TO_BASE64(npm)='$token'");
-        $this->db->where("npm='$token'");
+        $this->db->where("TO_BASE64(npm)='$token'");
+        // $this->db->where("npm='$token'");
         $query=$this->db->get()->result();
 
         // jika data "NPM" ditemukan
