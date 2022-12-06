@@ -31,7 +31,9 @@ class Mahasiswa extends Server
 			"jurusan"=>$this->post("jurusan"),
 		);
 		// panggil method simpan
-		$hasil=$this->mdl->simpan_data($data["npm"],$data["nama"],$data["telepon"],$data["jurusan"],base64_encode($data["npm"]));
+		$hasil=$this->mdl->simpan_data ($data
+		["npm"],$data["nama"],$data["telepon"],
+		$data["jurusan"],base64_encode($data["npm"]));
 		// jika data tidak ditemukan
 		if($hasil==0){
 			$this->response(array("status"=>"data berhasil disimpan"),200);

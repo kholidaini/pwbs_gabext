@@ -24,16 +24,13 @@ CREATE TABLE IF NOT EXISTS `tb_mahasiswa` (
   `telepon` varchar(15) COLLATE latin1_general_ci NOT NULL,
   `jurusan` enum('IF','SI','TI','TK','SIA') COLLATE latin1_general_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
--- Dumping data for table db_pwbs.tb_mahasiswa: ~5 rows (approximately)
+-- Dumping data for table db_pwbs.tb_mahasiswa: ~2 rows (approximately)
 /*!40000 ALTER TABLE `tb_mahasiswa` DISABLE KEYS */;
 INSERT INTO `tb_mahasiswa` (`id`, `npm`, `nama`, `telepon`, `jurusan`) VALUES
-	(1, '17312261', 'olid', '082372247859', 'IF'),
-	(2, '17243544', 'ollldsf', '08214352', 'TI'),
-	(3, '129083021', 'kholid', '023834223', 'TI'),
-	(4, '1465465', 'Jokowazza', '023834223', 'IF'),
-	(5, '14654546', 'Jokowaz', '023834223', 'SI');
+	(27, '129084903', 'kholid aini', '9083450349', 'IF'),
+	(28, '58903490', 'Khalid', '348590', 'TI');
 /*!40000 ALTER TABLE `tb_mahasiswa` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
