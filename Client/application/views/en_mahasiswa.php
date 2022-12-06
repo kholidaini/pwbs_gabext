@@ -122,6 +122,7 @@
             // jika txt_npm tidak diisi
             if(txt_npm.value===""){
                 id_npm.style.color="#ff0000"
+                txt_npm.style.color="#ff0000"
                 err_npm.style.display="unset"
                 err_npm.innerHTML="<em>NPM Harus Diisi !</em>"
             }
@@ -129,6 +130,7 @@
             // jika txt_npm diisi
             else{
                 id_npm.style.color="unset"
+                txt_npm.style.color="unset"
                 err_npm.style.display="none"
                 err_npm.innerHTML=""
             }
@@ -138,12 +140,14 @@
             const nama = (txt_nama.value==="")?
             [
                 id_nama.style.color="#ff0000",
+                txt_nama.style.color="#ff0000",
                 err_nama.style.display="unset",
                 err_nama.innerHTML="<em>Nama Harus Diisi !</em>"
             ]
             :
             [
                 id_nama.style.color="unset",
+                txt_nama.style.color="unset",
                 err_nama.style.display="none",
                 err_nama.innerHTML=""
             ]
@@ -151,12 +155,14 @@
             const telepon = (txt_telepon.value==="")?
             [
                 id_telepon.style.color="#ff0000",
+                txt_telepon.style.color="#ff0000",
                 err_telepon.style.display="unset",
                 err_telepon.innerHTML="<em>Telepon Harus Diisi !</em>"
             ]
             :
             [
                 id_telepon.style.color="unset",
+                txt_telepon.style.color="unset",
                 err_telepon.style.display="none",
                 err_telepon.innerHTML=""
             ]
@@ -165,18 +171,20 @@
             const jurusan = (cbo_jurusan.value==="-")?
             [
                 id_jurusan.style.color="#ff0000",
+                cbo_jurusan.style.color="#ff0000",
                 err_jurusan.style.display="unset",
                 err_jurusan.innerHTML="<em>jurusan Harus Diisi !</em>"
             ]
             :
             [
                 id_jurusan.style.color="unset",
+                cbo_jurusan.style.color="#ff0000",
                 err_jurusan.style.display="none",
                 err_jurusan.innerHTML=""
             ]
         
 
-        if(err_npm.innerHTML===""&&nama[1]===""&&telepon[1]===""&&jurusan[1]==="")
+        if(err_npm.innerHTML===""&&nama[3]===""&&telepon[3]===""&&jurusan[3]==="")
         {
             setSave(txt_npm.value,txt_nama.value,txt_telepon.value,cbo_jurusan.value)
         
@@ -194,7 +202,7 @@
 
         // isi/tambah nilai
         form.append("npm_mhs",npm);
-        form.append("nama_mhs",namanya);
+        form.append("nama_mhs",nama);
         form.append("telepon_mhs",telepon);
         form.append("jurusan_mhs",jurusan);
         
