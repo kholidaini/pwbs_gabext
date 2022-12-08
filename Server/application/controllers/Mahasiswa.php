@@ -26,13 +26,14 @@ class Mahasiswa extends Server
 		$this->load->model("Mmahasiswa","mdl",TRUE);
 		$data = array(
 			"npm" => $this->post("npm"),
-			"nama"=>$this->post("nama"),
-			"telepon"=>$this->post("telepon"),
-			"jurusan"=>$this->post("jurusan"),
+			"nama"=> $this->post("nama"),
+			"telepon"=> $this->post("telepon"),
+			"jurusan"=> $this->post("jurusan"),
 		);
 		// panggil method simpan
 		$hasil=$this->mdl->simpan_data ($data
 		["npm"],$data["nama"],$data["telepon"],
+		// $data["jurusan"],$data["npm"]);
 		$data["jurusan"],base64_encode($data["npm"]));
 		// jika data tidak ditemukan
 		if($hasil==0){
@@ -83,15 +84,28 @@ class Mahasiswa extends Server
 		// // panggil method "hapus_data"
 		$token=$this->delete("npm");
 		// $hasil=$this->mdl->hapus_data($token);
-		$hasil=$this->mdl->hapus_data(base64_encode($token));
+		// $hasil=$this->mdl->hapus_data(base64_decode($token));
 		// panggil method "hapus_data"
 		// jika data berhasil dihapus
-		if($hasil ==1){
-			$this->response(array("status"=>"data berhasil dihapus"),200);
-		}
-		// jika data gagal dihapus
-		else{
-			$this->response(array("status"=>"data gagal dihapus!"),200);
-		}
+
+
+		$hasil = $this->mdl->hapus_data(base64_encode($token));
+
+        if($hasil == 1)
+        {
+            $this->response(array("status" => "Data Berhasil Dihapus"), 200);
+        }
+        else
+        {
+            $this->response(array("status" => "Data Gagal Dihapus"), 200);
+        }
+		// 
+		// if($hasil == 1){
+		// 	$this->response(array("status"=>"data berhasil dihapus"),200);
+		// }
+		// // jika data gagal dihapus
+		// else{
+		// 	$this->response(array("status"=>"data gagal dihapus!"),200);
+		// }
 	}
 }

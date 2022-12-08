@@ -19,23 +19,50 @@ class Mmahasiswa extends CI_Model
         // cek NPM tersedia
         $this->db->select("npm");
         $this->db->from("tb_mahasiswa");
-        $this->db->where("TO_BASE64(npm)='$token'");
-        // $this->db->where("npm='$token'");
-        $query=$this->db->get()->result();
+                                            // $this->db->where("TO_BASE64(npm)='$token'");
+        $this->db->where("npm ='$token'");
 
-        // jika data "NPM" ditemukan
-        if(count($query)==1)
-        // ($query)!=0) = memungkinkan penarikan data lebih dari 1
-        {
-            // hapus data
-            $this->db->where("npm= '$token'");
-            $this->db->delete("tb_mahasiswa");
-            $hasil=1;
+
+
+        $this->db->where("TO_BASE64(npm) = '$token'");
+
+		$query = $this->db->get()->result();
+      
+		if(count($query) == 1)
+		{
+			$this->db->where("TO_BASE64(npm) = '$token'");
+			$this->db->delete("tb_mahasiswa");
+			$hasil = 1;
         }
-        // jika data "NPM" tidak ditemukan
-        else{
-            $hasil=0;
+        else
+		{
+            $hasil = 0;
         }
+
+
+
+
+
+
+
+
+        // $query=$this->db->get()->result();
+        
+
+        // // jika data "NPM" ditemukan
+        // if(count($query)==1)
+        // // ($query)!=0) = memungkinkan penarikan data lebih dari 1
+        // {
+        //     // hapus data
+        //                                      // $this->db->where("TO_BASE64(npm) = '$token'");
+        //     $this->db->where("npm = '$token'");
+        //     $this->db->delete("tb_mahasiswa");
+        //     $hasil=1;
+        // }
+        // // jika data "NPM" tidak ditemukan
+        // else{
+        //     $hasil=0;
+        
         return $hasil;
     }
 
@@ -43,7 +70,8 @@ class Mmahasiswa extends CI_Model
         // cek npm
         $this->db->select("npm");
         $this->db->from("tb_mahasiswa");
-        $this->db->where("TO_BASE64(npm)='$token'");
+        $this->db->where("TO_BASE64(npm)= '$token'");
+        // $this->db->where("npm = '$token'");
         $query=$this->db->get()->result();
 
         // jika data "NPM" ditemukan
