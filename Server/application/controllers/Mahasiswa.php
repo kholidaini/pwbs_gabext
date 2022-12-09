@@ -83,29 +83,17 @@ class Mahasiswa extends Server
 		// ambil parameter NPM
 		// // panggil method "hapus_data"
 		$token=$this->delete("npm");
-		// $hasil=$this->mdl->hapus_data($token);
-		// $hasil=$this->mdl->hapus_data(base64_decode($token));
+		$hasil=$this->mdl->hapus_data($token);
+		// $hasil=$this->mdl->hapus_data(base64_encode($token));
 		// panggil method "hapus_data"
 		// jika data berhasil dihapus
-
-
-		$hasil = $this->mdl->hapus_data(base64_encode($token));
-
-        if($hasil == 1)
-        {
-            $this->response(array("status" => "Data Berhasil Dihapus"), 200);
-        }
-        else
-        {
-            $this->response(array("status" => "Data Gagal Dihapus"), 200);
-        }
-		// 
-		// if($hasil == 1){
-		// 	$this->response(array("status"=>"data berhasil dihapus"),200);
-		// }
-		// // jika data gagal dihapus
-		// else{
-		// 	$this->response(array("status"=>"data gagal dihapus!"),200);
-		// }
+		
+		if($hasil == 1){
+			$this->response(array("status"=>"data berhasil dihapus"),200);
+		}
+		// jika data gagal dihapus
+		else{
+			$this->response(array("status"=>"data gagal dihapus!"),200);
+		}
 	}
 }

@@ -21,30 +21,17 @@ class Mmahasiswa extends CI_Model
         $this->db->from("tb_mahasiswa");
                                             // $this->db->where("TO_BASE64(npm)='$token'");
         $this->db->where("npm ='$token'");
-
-
-
-        $this->db->where("TO_BASE64(npm) = '$token'");
-
+        // $this->db->where("TO_BASE64(npm) = '$token'");
 		$query = $this->db->get()->result();
-      
 		if(count($query) == 1)
 		{
-			$this->db->where("TO_BASE64(npm) = '$token'");
+            // $this->db->where("TO_BASE64(npm) = '$token'");
+            $this->db->where("npm = '$token'");
 			$this->db->delete("tb_mahasiswa");
 			$hasil = 1;
-        }
-        else
-		{
+        } else {
             $hasil = 0;
         }
-
-
-
-
-
-
-
 
         // $query=$this->db->get()->result();
         
