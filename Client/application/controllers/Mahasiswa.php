@@ -8,19 +8,11 @@ class Mahasiswa extends CI_Controller {
 	{	
 		// ambil data api mahasiswa(get)
 		$data["tampil"]=json_decode($this->client->simple_get(APIMAHASISWA));
-
+		$this->load->view('vw_mahasiswa',$data);
 		// foreach($data["tampil"]->mahasiswa as $record){
-
 		// 	echo $record->npm_mhs."-".
 		// 		$record->nama_mhs."<br>";
 		// }
-
-
-
-		$this->load->view('vw_mahasiswa',$data);
-
-
-		
 	}
 
 	function setDelete(){
@@ -58,9 +50,20 @@ class Mahasiswa extends CI_Controller {
 
 	function updateMahasiswa(){
 		// $segmen = $this->uri->total_segments();
-		// echo $segmen;
-		$segmen = $this->uri->segment();
-		echo $segmen;
-		
+		// ambil nilai npm
+		$token = $this->uri->segment(3);
+		$data["tampil"]=json_decode($this->client->simple_get(APIMAHASISWA,
+		array("npm"=>$token)));
+
+		foreach($data["tampil"]->mahasiswa as $record)
+		{
+			$data["npm"] = $record->npm_mhs;
+			$data["nama"] = $record->nama_mhs;
+			$data["telepon"] = $record->telepon_mhs;
+			$data["jurusan"] = $record->jurusan_mhs;
+			$data["token"] = $token;
+			
+		}
+		$this->load->view('up_mahasiswa', $data);
     }
 }
