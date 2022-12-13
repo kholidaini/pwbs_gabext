@@ -55,4 +55,9 @@ class Mahasiswa extends CI_Controller {
 		echo json_encode(array("statusnya" => $save->status));
 
 	}
+
+	function updateMahasiswa(){
+		$segmen = $this->uri->total_segments();
+		echo $segmen;
+    }
 }
