@@ -4,14 +4,29 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Mmahasiswa extends CI_Model
 {
 
-    function get_data()
+    function get_data($token)
     {
+
+        
         // menampilkan data table dengan Alias (agar tidak sama dengan db)
         $this->db->select("id AS id_mhs, npm AS npm_mhs, nama AS nama_mhs, telepon AS telepon_mhs, jurusan AS jurusan_mhs");
-        $this->db->from("tb_mahasiswa");
-        $this->db->order_by("npm");
+        // $this->db->from("tb_mahasiswa");
+        // $this->db->order_by("npm");
+
+        
+        $this->db->from('tb_mahasiswa');
+
+        if($token !="")
+        {
+            $this->db->where("npm ='$token'");
+        }
+
+        $this->db->order_by('npm');
+
         $query = $this->db->get()->result();
         return $query;
+
+
     }
     
     // fungsi hapus data

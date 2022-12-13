@@ -125,6 +125,7 @@
         function gotoUpdate(npm){
             // alihkan ke halaman ubah data
             location.href='<?php echo site_url("Mahasiswa/updateMahasiswa");?>'+'/'+npm;
+            
         }
 
         // buat fungsi hapus data

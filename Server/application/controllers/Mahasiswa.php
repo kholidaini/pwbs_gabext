@@ -13,7 +13,9 @@ class Mahasiswa extends Server
 		$this->load->model("Mmahasiswa", "mdl", TRUE);
 
 		// panggil fungsi "get_data"
-		$hasil = $this->mdl->get_data();
+		$token = $this->get("npm");
+		$hasil = $this->mdl->get_data(base64_encode($token));
+		// $hasil = $this->mdl->get_data($token);
 
 		// memberikan response
 		$this->response(array("mahasiswa" => $hasil), 200);
@@ -96,4 +98,6 @@ class Mahasiswa extends Server
 			$this->response(array("status"=>"data gagal dihapus!"),200);
 		}
 	}
+
+	
 }
