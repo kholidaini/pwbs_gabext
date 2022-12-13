@@ -57,7 +57,10 @@ class Mahasiswa extends CI_Controller {
 	}
 
 	function updateMahasiswa(){
-		$segmen = $this->uri->total_segments();
+		// $segmen = $this->uri->total_segments();
+		// echo $segmen;
+		$segmen = $this->uri->segment();
 		echo $segmen;
+		
     }
 }
