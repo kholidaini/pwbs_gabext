@@ -19,7 +19,7 @@ class Mmahasiswa extends CI_Model
         if($token !="")
         {
             // $this->db->where("npm ='$token'");
-            $this->db->where("TO_BASE64(npm) = '$token'");
+            $this->db->where("TO_BASE64(npm) = '$token' or to_base64(nama)= '$token'");
         }
 
         $this->db->order_by('npm');

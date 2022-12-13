@@ -64,6 +64,6 @@ class Mahasiswa extends CI_Controller {
 			$data["token"] = $token;
 			
 		}
-		$this->load->view('up_mahasiswa', $data);
+		// $this->load->view('up_mahasiswa', $data);
     }
 }
