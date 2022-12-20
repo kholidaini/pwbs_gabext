@@ -96,41 +96,42 @@
         })
 
         // inisialisasi object
-        let btn_simpan = document.getElementById("btn_simpan");
+        let btn_ubah = document.getElementById("btn_ubah");
 
         // deklarasi variabel komponen
         let txt_npm = document.getElementById("txt_npm");
         let txt_nama = document.getElementById("txt_nama");
         let txt_telepon = document.getElementById("txt_telepon");
         let cbo_jurusan = document.getElementById("cbo_jurusan");
+        
 
         // tampilkan nilai
         txt_npm.value = '<?php echo $npm;?>';
         txt_nama.value = '<?php echo $nama;?>';
         txt_telepon.value = '<?php echo $telepon;?>';
-        txt_jurusan.value = '<?php echo $jurusan;?>';
+        cbo_jurusan.value = '<?php echo $jurusan;?>';
+        let token = '<?php echo $token;?>';
 
 
-        btn_simpan.addEventListener('click',function(){
+        btn_ubah.addEventListener('click',function(){
             // deklarasi variabel object
             // npm
             let id_npm=document.getElementById("id_npm");
-            let txt_npm=document.getElementById("txt_npm");
             let err_npm=document.getElementById("err_npm");
             // nama
             let id_nama=document.getElementById("id_nama");
-            let txt_nama=document.getElementById("txt_nama");
             let err_nama=document.getElementById("err_nama");
 
             // telepon
             let id_telepon=document.getElementById("id_telepon");
-            let txt_telepon=document.getElementById("txt_telepon");
             let err_telepon=document.getElementById("err_telepon");
 
             // jurusan
             let id_jurusan=document.getElementById("id_jurusan");
-            let cbo_jurusan=document.getElementById("cbo_jurusan");
             let err_jurusan=document.getElementById("err_jurusan");
+
+            // token
+            
 
             // jika txt_npm tidak diisi
             if(txt_npm.value===""){
@@ -199,7 +200,7 @@
 
         if(err_npm.innerHTML===""&&nama[3]===""&&telepon[3]===""&&jurusan[3]==="")
         {
-            setSave(txt_npm.value,txt_nama.value,txt_telepon.value,cbo_jurusan.value)
+            setUpdate(txt_npm.value,txt_nama.value,txt_telepon.value,cbo_jurusan.value,token)
         
         }
     })
@@ -207,10 +208,10 @@
     // buat fungsi refresh
     function setRefresh(){
             // alihkan ke controller Addmahasiswa
-            location.href='<?php echo site_url("Mahasiswa/addMahasiswa");?>'
+            location.href='<?php echo site_url("Mahasiswa/updateMahasiswa");?>' "/"+token;
         }
 
-    const setSave = (npm,nama,telepon,jurusan)=>{
+    const setUpdate = (npm,nama,telepon,jurusan,token)=>{
         let form   = new FormData();
 
         // isi/tambah nilai
@@ -218,10 +219,10 @@
         form.append("nama_mhs",nama);
         form.append("telepon_mhs",telepon);
         form.append("jurusan_mhs",jurusan);
-        
+        form.append("token_mhs",token);
         
         // kirim data
-        fetch('<?php echo site_url("Mahasiswa/setSave");?>',
+        fetch('<?php echo site_url("Mahasiswa/setUpdate");?>',
         {
             method: "POST",
             body:form
