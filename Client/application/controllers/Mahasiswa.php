@@ -6,6 +6,12 @@ class Mahasiswa extends CI_Controller {
 	
 	public function index()
 	{	
+		// akses auth basic
+		$this->client->http_login("uti", "pwbs");
+
+
+
+
 		// ambil data api mahasiswa(get)
 		$data["tampil"]=json_decode($this->client->simple_get(APIMAHASISWA));
 		$this->load->view('vw_mahasiswa',$data);
@@ -16,6 +22,10 @@ class Mahasiswa extends CI_Controller {
 	}
 
 	function setDelete(){
+
+		// akses auth basic
+		$this->client->http_login("uti", "pwbs");
+
 		$json = file_get_contents("php://input");
 		$hasil = json_decode($json);
 
@@ -35,6 +45,10 @@ class Mahasiswa extends CI_Controller {
 	}
 
 	function setSave(){
+
+		// akses auth basic
+		$this->client->http_login("uti", "pwbs");
+
 		$data=array(
 			"npm"=>$this->input->POST("npm_mhs"),
 			"nama"=>$this->input->POST("nama_mhs"),
@@ -49,6 +63,8 @@ class Mahasiswa extends CI_Controller {
 	}
 
 	function updateMahasiswa(){
+		$this->client->http_login("uti", "pwbs");
+
 		// $segmen = $this->uri->total_segments();
 		// ambil nilai npm
 		$token = $this->uri->segment(3);
@@ -68,6 +84,11 @@ class Mahasiswa extends CI_Controller {
     }
 
 	function setUpdate(){
+
+		// akses auth basic
+		// $this->client->http_login("uti", "pwbs");
+
+
 		$data=array(
 			"npm"=>$this->input->POST("npm_mhs"),
 			"nama"=>$this->input->POST("nama_mhs"),
