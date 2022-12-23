@@ -84,6 +84,7 @@
     </nav>
 
     <script>
+        
         // inisialisasi object
         let btn_lihat = document.getElementById("btn_lihat");
 
